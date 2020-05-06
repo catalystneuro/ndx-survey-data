@@ -1,0 +1,14 @@
+namespaces:
+- author:
+  - Ben Dichter
+  - Armin Najarpour Foroushani
+  contact:
+  - ben.dichter@gmail.com
+  doc: NWB extension for survey/ behavioral data
+  name: ndx-survey-data
+  schema:
+  - namespace: core
+    neurodata_types:
+    - ElectricalSeries
+  - source: ndx-survey-data.extensions.yaml
+  version: 0.1.0
