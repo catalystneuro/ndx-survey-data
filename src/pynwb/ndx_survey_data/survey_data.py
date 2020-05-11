@@ -1,5 +1,5 @@
 from pynwb import register_class
-from pynwb.file import LabMetaData, DynamicTable
+from pynwb.file import DynamicTable
 from hdmf.utils import docval, call_docval_func, get_docval
 
 
