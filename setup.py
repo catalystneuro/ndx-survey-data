@@ -1,35 +1,26 @@
 # -*- coding: utf-8 -*-
 
 import os
+from os import path
 
 from setuptools import setup, find_packages
 from shutil import copy2
 
-# load README.md/README.rst file
-try:
-    if os.path.exists('README.md'):
-        with open('README.md', 'r') as fp:
-            readme = fp.read()
-            readme_type = 'text/markdown; charset=UTF-8'
-    elif os.path.exists('README.rst'):
-        with open('README.rst', 'r') as fp:
-            readme = fp.read()
-            readme_type = 'text/x-rst; charset=UTF-8'
-    else:
-        readme = ""
-except Exception:
-    readme = ""
+here = path.abspath(path.dirname(__file__))
+
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup_args = {
     'name': 'ndx-survey-data',
     'version': '0.1.0',
     'description': 'NWB extension for survey/ behavioral data',
-    'long_description': readme,
-    'long_description_content_type': readme_type,
     'author': 'Ben Dichter, Armin Najarpour Foroushani',
-    'author_email': 'ben.dichter@gmail.com',
+    'author_email': 'ben.dichter@catalystneuro.com',
     'url': '',
     'license': 'BSD 3-Clause',
+    'long_description': long_description,
+    'long_description_content_type': "text/markdown",
     'install_requires': [
         'pynwb>=1.1.2'
     ],
