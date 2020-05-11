@@ -28,19 +28,55 @@ def main():
    )
     
     survey_data.add_dataset(
-        name='questions',
+        name='survey_name',
         neurodata_type_inc='DynamicTableRegion',
-        doc='Survey questions',
-        dims=('num_questions',),
+        doc='Name of survey',
+        dims=('num_samples',),
         shape=(None,),
         dtype='text'
     )
 
     survey_data.add_dataset(
-        name='responses',
+        name='question_text',
         neurodata_type_inc='DynamicTableRegion',
-        doc='Response to survey questions',
-        dims=('num_questions',),
+        doc='Text of survey question',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    survey_data.add_dataset(
+        name='response_range',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Limits or range of survey response (e.g. 0 to 10; ‘no pain’ to ‘worst pain possible’)',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    survey_data.add_dataset(
+        name='response',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Response to survey question',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    survey_data.add_dataset(
+        name='response_timestamp',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Timestamp of survey response',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    survey_data.add_dataset(
+        name='notes',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='An indication of how to calculate subscore(s), if applicable',
+        dims=('num_samples',),
         shape=(None,),
         dtype='text'
     )
