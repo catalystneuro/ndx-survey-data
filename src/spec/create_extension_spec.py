@@ -21,7 +21,7 @@ def main():
 
     
     survey_data = NWBGroupSpec(
-        doc='Table that holds information about the survey/behavior'
+        doc='Table that holds information about the survey/behavior',
         neurodata_type_def='SurveyDataTable',
         neurodata_type_inc='DynamicTable',
         default_name='survey_data'
@@ -33,7 +33,7 @@ def main():
         doc='Survey questions',
         dims=('num_questions',),
         shape=(None,),
-        dtype='str'
+        dtype='text'
     )
 
     survey_data.add_dataset(
@@ -42,7 +42,7 @@ def main():
         doc='Response to survey questions',
         dims=('num_questions',),
         shape=(None,),
-        dtype='str'
+        dtype='text'
     )
 
     new_data_types = [survey_data]
