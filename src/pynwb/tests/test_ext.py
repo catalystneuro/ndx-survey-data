@@ -2,7 +2,7 @@ import os
 from pynwb import NWBHDF5IO, NWBFile
 from pynwb.file import DynamicTableRegion
 from datetime import datetime
-from ndx-survey-data import SurveyDataTable
+from ndx_survey_data import SurveyDataTable
 from pynwb.ecephys import ElectricalSeries
 
 import numpy as np
