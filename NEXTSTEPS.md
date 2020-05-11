@@ -16,6 +16,8 @@ and any other packages required by your extension.
       - If present, the `src/pynwb` folder MUST contain the following:
         - `ndx-survey-data` - Folder with the sources of the NWB extension
         - `ndx-survey-data/__init__.py` - Python file that may be empty
+        - `requirements.txt` - Text file listing the Python package requirements for the extension
+        - `README.md` - Markdown file describing the NWB extension
       - If present, the `src/pynwb` folder MAY contain the following files/folders:
         - `test` - Folder for unit tests for the extensions
         - `jupyter_widgets` - Optional package with custom widgets for use with Jupyter
@@ -30,7 +32,10 @@ use any dependencies.
 
 ## Documenting and Publishing Your Extension to the Community
 
-1. Install the latest release of hdmf_docutils: `python -m pip install hdmf-docutils`
+1. Clone the latest nwb-docutils repository https://github.com/nwb-extensions-test/ndx-template.git
+or install the latest release:
+`python -m pip install nwb-docutils`
+    - If you cloned the latest version, run `python setup.py install` to install nwb-docutils locally.
 
 2. Start a git repository for your extension directory ndx-survey-data
  and push it to GitHub. You will need a GitHub account.
@@ -50,7 +55,7 @@ your extension.
 
 8. Make a release for the extension on GitHub with the version number specified. e.g. if version is 0.1.0, then this page should exist: https://github.com/armin12/ndx-survey-data/releases/tag/0.1.0 . For instructions on how to make a release on GitHub see [here](https://help.github.com/en/github/administering-a-repository/creating-releases).
 
-9. Publish your updated extension on [PyPI](https://pypi.org/).
+9. Publish your updated extension on PyPi.
     - Follow these directions: https://packaging.python.org/tutorials/packaging-projects/
     - You may need to modify `setup.py`
     - If your extension version is 0.1.0, then this page should exist: https://pypi.org/project/ndx-survey-data/0.1.0
@@ -93,7 +98,7 @@ src: https://github.com/armin12/ndx-survey-data
 pip: https://pypi.org/project/ndx-survey-data/
 license: BSD 3-Clause
 maintainers:
-  - armin12
+  - bendichter
 ```
 
 14. Edit `staged-extensions/ndx-survey-data/README.md`

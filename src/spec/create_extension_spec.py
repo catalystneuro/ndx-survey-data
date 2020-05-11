@@ -2,46 +2,50 @@
 
 import os.path
 
-from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec, NWBAttributeSpec
-# TODO: import the following spec classes as needed
-# from pynwb.spec import NWBDatasetSpec, NWBLinkSpec, NWBDtypeSpec, NWBRefSpec
+from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec
 
 
 def main():
     # these arguments were auto-generated from your cookiecutter inputs
     ns_builder = NWBNamespaceBuilder(
-        doc="""NWB extension for survey/ behavioral data""",
-        name="""ndx-survey-data""",
-        version="""0.1.0""",
-        author=list(map(str.strip, """Ben Dichter, Armin Najarpour Foroushani""".split(','))),
-        contact=list(map(str.strip, """ben.dichter@gmail.com""".split(',')))
+        doc='NWB extension for survey/ behavioral data',
+        name='ndx-survey-data',
+        version='0.1.0',
+        author=list(map(str.strip, 'Ben Dichter, Armin Najarpour Foroushani'.split(','))),
+        contact=list(map(str.strip, 'ben.dichter@catalystneuro.com'.split(',')))
     )
 
-    # TODO: specify the neurodata_types that are used by the extension as well
-    # as in which namespace they are found
-    # this is similar to specifying the Python modules that need to be imported
-    # to use your new data types
-    ns_builder.include_type('ElectricalSeries', namespace='core')
+    
+    for type_name in ('DynamicTableRegion', 'DynamicTable'):
+        ns_builder.include_type(type_name, namespace='core')
 
-    # TODO: define your new data types
-    # see https://pynwb.readthedocs.io/en/latest/extensions.html#extending-nwb
-    # for more information
-    tetrode_series = NWBGroupSpec(
-        neurodata_type_def='TetrodeSeries',
-        neurodata_type_inc='ElectricalSeries',
-        doc=('An extension of ElectricalSeries to include the tetrode ID for '
-             'each time series.'),
-        attributes=[
-            NWBAttributeSpec(
-                name='trode_id',
-                doc='The tetrode ID.',
-                dtype='int32'
-            )
-        ],
+    
+    survey_data = NWBGroupSpec(
+        doc='Table that holds information about the survey/behavior',
+        neurodata_type_def='SurveyDataTable',
+        neurodata_type_inc='DynamicTable',
+        default_name='survey_data'
+   )
+    
+    survey_data.add_dataset(
+        name='questions',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Survey questions',
+        dims=('num_questions',),
+        shape=(None,),
+        dtype='text'
     )
 
-    # TODO: add all of your new data types to this list
-    new_data_types = [tetrode_series]
+    survey_data.add_dataset(
+        name='responses',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Response to survey questions',
+        dims=('num_questions',),
+        shape=(None,),
+        dtype='text'
+    )
+
+    new_data_types = [survey_data]
 
     # export the spec to yaml files in the spec folder
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'spec'))

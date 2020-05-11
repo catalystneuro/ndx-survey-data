@@ -1,8 +1,22 @@
 groups:
-- neurodata_type_def: TetrodeSeries
-  neurodata_type_inc: ElectricalSeries
-  doc: An extension of ElectricalSeries to include the tetrode ID for each time series.
-  attributes:
-  - name: trode_id
-    dtype: int32
-    doc: The tetrode ID.
+- neurodata_type_def: SurveyDataTable
+  neurodata_type_inc: DynamicTable
+  default_name: survey_data
+  doc: Table that holds information about the survey/behavior
+  datasets:
+  - name: questions
+    neurodata_type_inc: DynamicTableRegion
+    dtype: text
+    dims:
+    - num_questions
+    shape:
+    - null
+    doc: Survey questions
+  - name: responses
+    neurodata_type_inc: DynamicTableRegion
+    dtype: text
+    dims:
+    - num_questions
+    shape:
+    - null
+    doc: Response to survey questions

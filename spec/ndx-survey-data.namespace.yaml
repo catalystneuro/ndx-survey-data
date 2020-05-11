@@ -3,12 +3,13 @@ namespaces:
   - Ben Dichter
   - Armin Najarpour Foroushani
   contact:
-  - ben.dichter@gmail.com
+  - ben.dichter@catalystneuro.com
   doc: NWB extension for survey/ behavioral data
   name: ndx-survey-data
   schema:
   - namespace: core
     neurodata_types:
-    - ElectricalSeries
+    - DynamicTableRegion
+    - DynamicTable
   - source: ndx-survey-data.extensions.yaml
   version: 0.1.0
