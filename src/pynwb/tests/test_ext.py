@@ -2,8 +2,6 @@ import os
 from pynwb import NWBHDF5IO, NWBFile
 from datetime import datetime
 from ndx_survey_data import SurveyDataTable
-
-import numpy as np
 from numpy.testing import assert_array_equal
 
 
