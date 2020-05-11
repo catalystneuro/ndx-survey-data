@@ -2,7 +2,7 @@
 
 import os.path
 
-from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec, NWBAttributeSpec
+from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec
 
 
 def main():
