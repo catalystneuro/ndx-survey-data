@@ -69,7 +69,7 @@ def main():
         doc='Timestamp of survey response',
         dims=('num_samples',),
         shape=(None,),
-        dtype='text'
+        dtype='int'
     )
     
     survey_data.add_dataset(
