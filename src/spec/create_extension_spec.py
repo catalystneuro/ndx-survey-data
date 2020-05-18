@@ -26,7 +26,7 @@ def main():
         neurodata_type_inc='DynamicTable',
         attributes=[NWBAttributeSpec(name='response_options',
                                      doc='Response Options',
-                                    dtype='str')],
+                                    dtype='text')],
         default_name='nrs_survey'
    )
     
@@ -76,7 +76,7 @@ def main():
         neurodata_type_inc='DynamicTable',
         attributes=[NWBAttributeSpec(name='response_options',
                                      doc='Response Options',
-                                    dtype='str')],
+                                    dtype='text')],
         default_name='vas_survey'
    )
     
@@ -128,7 +128,7 @@ def main():
         neurodata_type_inc='DynamicTable',
         attributes=[NWBAttributeSpec(name='response_options',
                                      doc='Response Options',
-                                    dtype='str')],
+                                    dtype='text')],
         default_name='mpq_survey'
    )
     
