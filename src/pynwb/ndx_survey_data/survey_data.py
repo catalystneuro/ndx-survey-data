@@ -1,6 +1,6 @@
 from pynwb import register_class
 from pynwb.file import DynamicTable
-from hdmf.utils import docval, call_docval_func, get_docval
+from hdmf.utils import docval, call_docval_func, get_docval, getargs
 
 
 
@@ -9,6 +9,7 @@ class NRSDataTable(DynamicTable):
     """
     Table for storing NRS survey data
     """
+    __nwbfields__ = ('response_options',)
 
     __columns__ = (
         {'name': 'pain_intensity_rating', 'description': 'Pain Intensity Rating', 'required': True, 'index': False},
@@ -19,11 +20,13 @@ class NRSDataTable(DynamicTable):
 
     @docval(dict(name='name', type=str, doc='name of this NRSDataTable',
                  default='NRSDataTable'),  # required
+            dict(name='response_options', type=list, doc='Response Options'),
             dict(name='description', type=str, doc='Description of this VectorData',
                  default='references the NRS survey table'),
             *get_docval(DynamicTable.__init__, 'id', 'columns', 'colnames'))
     def __init__(self, **kwargs):
         call_docval_func(super(NRSDataTable, self).__init__, kwargs)
+        self.response_options = getargs('response_options', kwargs)
 
 
 
@@ -32,6 +35,7 @@ class VASDataTable(DynamicTable):
     """
     Table for storing VAS survey data
     """
+    __nwbfields__ = ('response_options',)
 
     __columns__ = (
         {'name': 'pain_intensity_rating', 'description': 'Pain Intensity Rating', 'required': True, 'index': False},
@@ -42,11 +46,13 @@ class VASDataTable(DynamicTable):
 
     @docval(dict(name='name', type=str, doc='name of this VASDataTable',
                  default='VASDataTable'),  # required
+            dict(name='response_options', type=list, doc='Response Options'),
             dict(name='description', type=str, doc='Description of this VectorData',
                  default='references the VAS survey table'),
             *get_docval(DynamicTable.__init__, 'id', 'columns', 'colnames'))
     def __init__(self, **kwargs):
         call_docval_func(super(VASDataTable, self).__init__, kwargs)
+        self.response_options = getargs('response_options', kwargs)
         
 
 
@@ -56,6 +62,7 @@ class MPQDataTable(DynamicTable):
     """
     Table for storing MPQ survey data
     """
+    __nwbfields__ = ('response_options',)
 
     __columns__ = (
         {'name': 'throbbing', 'description': 'Throbbing', 'required': False, 'index': False},
@@ -77,8 +84,10 @@ class MPQDataTable(DynamicTable):
 
     @docval(dict(name='name', type=str, doc='name of this MPQDataTable',
                  default='MPQDataTable'),  # required
+            dict(name='response_options', type=list, doc='Response Options'),
             dict(name='description', type=str, doc='Description of this VectorData',
                  default='references the MPQ survey table'),
             *get_docval(DynamicTable.__init__, 'id', 'columns', 'colnames'))
     def __init__(self, **kwargs):
         call_docval_func(super(MPQDataTable, self).__init__, kwargs)
+        self.response_options = getargs('response_options', kwargs)
