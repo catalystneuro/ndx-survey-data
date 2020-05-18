@@ -11,7 +11,11 @@ def test_ext():
     # NRS Survey
 
     nrs_data_table = NRSDataTable(name='nrs_data_table',
-                                              description='desc')
+                                  description='desc',
+                                  response_options=['0 = no pain, 10 = worst pain',
+                                                   '0 = no paint relief, 10 = complete pain relief',
+                                                   '0 = better, 5 = same, 10 = worse',
+                                                   '0 = pleasant, 10 = unpleasant'])
 
     nrs_data_table.add_row(pain_intensity_rating='2', 
                            pain_relief_rating='7',
@@ -29,7 +33,11 @@ def test_ext():
     # VAS Survey
 
     vas_data_table = VASDataTable(name='vas_data_table',
-                                              description='desc')
+                                 description='desc',
+                                 response_options=['‘No pain’ to ‘Worst pain possible’',
+                                                   '‘No pain relief’ to ‘Complete pain relief’',
+                                                   'Better – Same – Worse',
+                                                   '‘Pleasant’ to ‘Unpleasant’']))
 
     vas_data_table.add_row(pain_intensity_rating='20/50', 
                            pain_relief_rating='12/50',
@@ -78,6 +86,6 @@ def test_ext():
 
     with NWBHDF5IO('test_nwb.nwb', 'r', load_namespaces=True) as io:
         nwbfile = io.read()
-        assert_array_equal(nwbfile.processing['behavior'].data_interfaces['survey_data_table'][2]['questions'],'question3')
+        assert_array_equal(nwbfile.processing['behavior'].data_interfaces['nrs_data_table']['pain_intensity_rating'],'2')
 
     os.remove('test_nwb.nwb')
