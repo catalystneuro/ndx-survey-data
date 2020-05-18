@@ -2,7 +2,7 @@
 
 import os.path
 
-from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec
+from pynwb.spec import NWBNamespaceBuilder, export_spec, NWBGroupSpec, NWBAttributeSpec
 
 
 def main():
@@ -24,6 +24,9 @@ def main():
         doc='Table that holds information about the NRS survey',
         neurodata_type_def='NRSDataTable',
         neurodata_type_inc='DynamicTable',
+        attributes=[NWBAttributeSpec(name='response_options',
+                                     doc='Response Options',
+                                    dtype='str')],
         default_name='nrs_survey'
    )
     
@@ -71,6 +74,9 @@ def main():
         doc='Table that holds information about the VAS survey',
         neurodata_type_def='VASDataTable',
         neurodata_type_inc='DynamicTable',
+        attributes=[NWBAttributeSpec(name='response_options',
+                                     doc='Response Options',
+                                    dtype='str')],
         default_name='vas_survey'
    )
     
@@ -120,6 +126,9 @@ def main():
         doc='Table that holds information about the MPQ survey',
         neurodata_type_def='MPQDataTable',
         neurodata_type_inc='DynamicTable',
+        attributes=[NWBAttributeSpec(name='response_options',
+                                     doc='Response Options',
+                                    dtype='str')],
         default_name='mpq_survey'
    )
     
