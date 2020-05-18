@@ -33,11 +33,11 @@ def test_ext():
     # VAS Survey
 
     vas_data_table = VASDataTable(name='vas_data_table',
-                                 description='desc',
-                                 response_options=['‘No pain’ to ‘Worst pain possible’',
-                                                   '‘No pain relief’ to ‘Complete pain relief’',
-                                                   'Better – Same – Worse',
-                                                   '‘Pleasant’ to ‘Unpleasant’']))
+                                  description='desc',
+                                  response_options=['‘No pain’ to ‘Worst pain possible’',
+                                                    '‘No pain relief’ to ‘Complete pain relief’',
+                                                    'Better – Same – Worse',
+                                                    '‘Pleasant’ to ‘Unpleasant’'])
 
     vas_data_table.add_row(pain_intensity_rating='20/50', 
                            pain_relief_rating='12/50',
@@ -55,7 +55,8 @@ def test_ext():
     # MPQ Survey
 
     mpq_data_table = MPQDataTable(name='mpq_data_table',
-                                              description='desc')
+                                  description='desc',
+                                  response_options=['Mild','Moderate','Severe'])
 
     mpq_data_table.add_row(throbbing='Mild', shooting='Severe', stabbing='Moderate', 
                            sharp='Moderate', cramping='Severe', gnawing='Mild', 
