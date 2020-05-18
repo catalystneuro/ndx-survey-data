@@ -16,72 +16,251 @@ def main():
     )
 
     
-    for type_name in ('DynamicTableRegion', 'DynamicTable'):
+    for type_name in ('DynamicTableRegion', 'DynamicTable', 'VectorData'):
         ns_builder.include_type(type_name, namespace='core')
 
     
-    survey_data = NWBGroupSpec(
-        doc='Table that holds information about the survey/behavior',
-        neurodata_type_def='SurveyDataTable',
+    nrs_survey = NWBGroupSpec(
+        doc='Table that holds information about the NRS survey',
+        neurodata_type_def='NRSDataTable',
         neurodata_type_inc='DynamicTable',
-        default_name='survey_data'
+        default_name='nrs_survey'
    )
     
-    survey_data.add_dataset(
-        name='survey_name',
+    nrs_survey.add_dataset(
+        name='pain_intensity_rating',
         neurodata_type_inc='DynamicTableRegion',
-        doc='Name of survey',
+        doc='Pain Intensity Rating',
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
     )
 
-    survey_data.add_dataset(
-        name='question_text',
+    nrs_survey.add_dataset(
+        name='pain_relief_rating',
         neurodata_type_inc='DynamicTableRegion',
-        doc='Text of survey question',
+        doc='Pain Relief Rating',
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
     )
     
-    survey_data.add_dataset(
-        name='response_range',
+    nrs_survey.add_dataset(
+        name='relative_pain_intensity_rating',
         neurodata_type_inc='DynamicTableRegion',
-        doc='Limits or range of survey response (e.g. 0 to 10; ‘no pain’ to ‘worst pain possible’)',
+        doc='Relative Pain Intensity Rating',
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
     )
     
-    survey_data.add_dataset(
-        name='response',
+    nrs_survey.add_dataset(
+        name='pain_unpleasantness',
         neurodata_type_inc='DynamicTableRegion',
-        doc='Response to survey question',
-        dims=('num_samples',),
-        shape=(None,),
-        dtype='text'
-    )
-    
-    survey_data.add_dataset(
-        name='response_timestamp',
-        neurodata_type_inc='DynamicTableRegion',
-        doc='Timestamp of survey response',
-        dims=('num_samples',),
-        shape=(None,),
-        dtype='int'
-    )
-    
-    survey_data.add_dataset(
-        name='notes',
-        neurodata_type_inc='DynamicTableRegion',
-        doc='An indication of how to calculate subscore(s), if applicable',
+        doc='Pain Unpleasantness',
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
     )
 
-    new_data_types = [survey_data]
+    
+    
+    
+    
+    vas_survey = NWBGroupSpec(
+        doc='Table that holds information about the VAS survey',
+        neurodata_type_def='VASDataTable',
+        neurodata_type_inc='DynamicTable',
+        default_name='vas_survey'
+   )
+    
+    vas_survey.add_dataset(
+        name='pain_intensity_rating',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Pain Intensity Rating',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+
+    vas_survey.add_dataset(
+        name='pain_relief_rating',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Pain Relief Rating',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    vas_survey.add_dataset(
+        name='relative_pain_intensity_rating',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Relative Pain Intensity Rating',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    vas_survey.add_dataset(
+        name='pain_unpleasantness',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Pain Unpleasantness',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    
+    
+    
+    
+    
+    
+    mpq_survey = NWBGroupSpec(
+        doc='Table that holds information about the MPQ survey',
+        neurodata_type_def='MPQDataTable',
+        neurodata_type_inc='DynamicTable',
+        default_name='mpq_survey'
+   )
+    
+    mpq_survey.add_dataset(
+        name='throbbing',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Throbbing',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+
+    mpq_survey.add_dataset(
+        name='shooting',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Shooting',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='stabbing',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Stabbing',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='sharp',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Sharp',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='cramping',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Cramping',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='gnawing',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Gnawing',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='hot_burning',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Hot-burning',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='aching',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Aching',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='heavy',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Heavy',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='tender',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Tender',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='splitting',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Splitting',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='tiring_exhausting',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Tiring-Exhausting',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='sickening',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Sickening',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='fearful',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Fearful',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    mpq_survey.add_dataset(
+        name='cruel_punishing',
+        neurodata_type_inc='DynamicTableRegion',
+        doc='Cruel-Punishing',
+        dims=('num_samples',),
+        shape=(None,),
+        dtype='text'
+    )
+    
+    
+
+    new_data_types = [nrs_survey, vas_survey, mpq_survey]
 
     # export the spec to yaml files in the spec folder
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'spec'))
