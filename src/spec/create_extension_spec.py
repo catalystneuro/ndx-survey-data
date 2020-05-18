@@ -29,7 +29,7 @@ def main():
     
     nrs_survey.add_dataset(
         name='pain_intensity_rating',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Pain Intensity Rating',
         dims=('num_samples',),
         shape=(None,),
@@ -38,7 +38,7 @@ def main():
 
     nrs_survey.add_dataset(
         name='pain_relief_rating',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Pain Relief Rating',
         dims=('num_samples',),
         shape=(None,),
@@ -47,7 +47,7 @@ def main():
     
     nrs_survey.add_dataset(
         name='relative_pain_intensity_rating',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Relative Pain Intensity Rating',
         dims=('num_samples',),
         shape=(None,),
@@ -56,7 +56,7 @@ def main():
     
     nrs_survey.add_dataset(
         name='pain_unpleasantness',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Pain Unpleasantness',
         dims=('num_samples',),
         shape=(None,),
@@ -76,7 +76,7 @@ def main():
     
     vas_survey.add_dataset(
         name='pain_intensity_rating',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Pain Intensity Rating',
         dims=('num_samples',),
         shape=(None,),
@@ -85,7 +85,7 @@ def main():
 
     vas_survey.add_dataset(
         name='pain_relief_rating',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Pain Relief Rating',
         dims=('num_samples',),
         shape=(None,),
@@ -94,7 +94,7 @@ def main():
     
     vas_survey.add_dataset(
         name='relative_pain_intensity_rating',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Relative Pain Intensity Rating',
         dims=('num_samples',),
         shape=(None,),
@@ -103,7 +103,7 @@ def main():
     
     vas_survey.add_dataset(
         name='pain_unpleasantness',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Pain Unpleasantness',
         dims=('num_samples',),
         shape=(None,),
@@ -125,7 +125,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='throbbing',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Throbbing',
         dims=('num_samples',),
         shape=(None,),
@@ -134,7 +134,7 @@ def main():
 
     mpq_survey.add_dataset(
         name='shooting',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Shooting',
         dims=('num_samples',),
         shape=(None,),
@@ -143,7 +143,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='stabbing',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Stabbing',
         dims=('num_samples',),
         shape=(None,),
@@ -152,7 +152,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='sharp',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Sharp',
         dims=('num_samples',),
         shape=(None,),
@@ -161,7 +161,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='cramping',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Cramping',
         dims=('num_samples',),
         shape=(None,),
@@ -170,7 +170,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='gnawing',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Gnawing',
         dims=('num_samples',),
         shape=(None,),
@@ -179,7 +179,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='hot_burning',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Hot-burning',
         dims=('num_samples',),
         shape=(None,),
@@ -188,7 +188,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='aching',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Aching',
         dims=('num_samples',),
         shape=(None,),
@@ -197,7 +197,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='heavy',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Heavy',
         dims=('num_samples',),
         shape=(None,),
@@ -206,7 +206,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='tender',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Tender',
         dims=('num_samples',),
         shape=(None,),
@@ -215,7 +215,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='splitting',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Splitting',
         dims=('num_samples',),
         shape=(None,),
@@ -224,7 +224,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='tiring_exhausting',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Tiring-Exhausting',
         dims=('num_samples',),
         shape=(None,),
@@ -233,7 +233,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='sickening',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Sickening',
         dims=('num_samples',),
         shape=(None,),
@@ -242,7 +242,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='fearful',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Fearful',
         dims=('num_samples',),
         shape=(None,),
@@ -251,7 +251,7 @@ def main():
     
     mpq_survey.add_dataset(
         name='cruel_punishing',
-        neurodata_type_inc='DynamicTableRegion',
+        neurodata_type_inc='VectorData',
         doc='Cruel-Punishing',
         dims=('num_samples',),
         shape=(None,),
