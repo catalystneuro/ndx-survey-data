@@ -15,21 +15,19 @@ def main():
         contact=list(map(str.strip, 'ben.dichter@catalystneuro.com'.split(',')))
     )
 
-    
     for type_name in ('DynamicTableRegion', 'DynamicTable', 'VectorData'):
         ns_builder.include_type(type_name, namespace='core')
 
-    
     nrs_survey = NWBGroupSpec(
         doc='Table that holds information about the NRS survey',
         neurodata_type_def='NRSDataTable',
         neurodata_type_inc='DynamicTable',
         attributes=[NWBAttributeSpec(name='response_options',
                                      doc='Response Options',
-                                    dtype='text')],
+                                     dtype='text')],
         default_name='nrs_survey'
-   )
-    
+    )
+
     nrs_survey.add_dataset(
         name='pain_intensity_rating',
         neurodata_type_inc='VectorData',
@@ -47,7 +45,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     nrs_survey.add_dataset(
         name='relative_pain_intensity_rating',
         neurodata_type_inc='VectorData',
@@ -56,7 +54,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     nrs_survey.add_dataset(
         name='pain_unpleasantness',
         neurodata_type_inc='VectorData',
@@ -66,20 +64,16 @@ def main():
         dtype='text'
     )
 
-    
-    
-    
-    
     vas_survey = NWBGroupSpec(
         doc='Table that holds information about the VAS survey',
         neurodata_type_def='VASDataTable',
         neurodata_type_inc='DynamicTable',
         attributes=[NWBAttributeSpec(name='response_options',
                                      doc='Response Options',
-                                    dtype='text')],
+                                     dtype='text')],
         default_name='vas_survey'
-   )
-    
+    )
+
     vas_survey.add_dataset(
         name='pain_intensity_rating',
         neurodata_type_inc='VectorData',
@@ -97,7 +91,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     vas_survey.add_dataset(
         name='relative_pain_intensity_rating',
         neurodata_type_inc='VectorData',
@@ -106,7 +100,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     vas_survey.add_dataset(
         name='pain_unpleasantness',
         neurodata_type_inc='VectorData',
@@ -115,23 +109,17 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
-    
-    
-    
-    
-    
-    
+
     mpq_survey = NWBGroupSpec(
         doc='Table that holds information about the MPQ survey',
         neurodata_type_def='MPQDataTable',
         neurodata_type_inc='DynamicTable',
         attributes=[NWBAttributeSpec(name='response_options',
                                      doc='Response Options',
-                                    dtype='text')],
+                                     dtype='text')],
         default_name='mpq_survey'
-   )
-    
+    )
+
     mpq_survey.add_dataset(
         name='throbbing',
         neurodata_type_inc='VectorData',
@@ -149,7 +137,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='stabbing',
         neurodata_type_inc='VectorData',
@@ -158,7 +146,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='sharp',
         neurodata_type_inc='VectorData',
@@ -167,7 +155,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='cramping',
         neurodata_type_inc='VectorData',
@@ -176,7 +164,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='gnawing',
         neurodata_type_inc='VectorData',
@@ -185,7 +173,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='hot_burning',
         neurodata_type_inc='VectorData',
@@ -194,7 +182,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='aching',
         neurodata_type_inc='VectorData',
@@ -203,7 +191,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='heavy',
         neurodata_type_inc='VectorData',
@@ -212,7 +200,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='tender',
         neurodata_type_inc='VectorData',
@@ -221,7 +209,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='splitting',
         neurodata_type_inc='VectorData',
@@ -230,7 +218,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='tiring_exhausting',
         neurodata_type_inc='VectorData',
@@ -239,7 +227,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='sickening',
         neurodata_type_inc='VectorData',
@@ -248,7 +236,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='fearful',
         neurodata_type_inc='VectorData',
@@ -257,7 +245,7 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
+
     mpq_survey.add_dataset(
         name='cruel_punishing',
         neurodata_type_inc='VectorData',
@@ -266,8 +254,6 @@ def main():
         shape=(None,),
         dtype='text'
     )
-    
-    
 
     new_data_types = [nrs_survey, vas_survey, mpq_survey]
 

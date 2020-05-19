@@ -3,7 +3,6 @@ from pynwb.file import DynamicTable
 from hdmf.utils import docval, call_docval_func, get_docval, getargs
 
 
-
 @register_class('NRSDataTable', 'ndx-survey-data')
 class NRSDataTable(DynamicTable):
     """
@@ -14,7 +13,8 @@ class NRSDataTable(DynamicTable):
     __columns__ = (
         {'name': 'pain_intensity_rating', 'description': 'Pain Intensity Rating', 'required': True, 'index': False},
         {'name': 'pain_relief_rating', 'description': 'Pain Relief Rating', 'required': True, 'index': False},
-        {'name': 'relative_pain_intensity_rating', 'description': 'Relative Pain Intensity Rating', 'required': True, 'index': False},
+        {'name': 'relative_pain_intensity_rating', 'description': 'Relative Pain Intensity Rating', 'required': True,
+         'index': False},
         {'name': 'pain_unpleasantness', 'description': 'Pain Unpleasantness', 'required': True, 'index': False}
     )
 
@@ -29,7 +29,6 @@ class NRSDataTable(DynamicTable):
         self.response_options = getargs('response_options', kwargs)
 
 
-
 @register_class('VASDataTable', 'ndx-survey-data')
 class VASDataTable(DynamicTable):
     """
@@ -40,7 +39,8 @@ class VASDataTable(DynamicTable):
     __columns__ = (
         {'name': 'pain_intensity_rating', 'description': 'Pain Intensity Rating', 'required': True, 'index': False},
         {'name': 'pain_relief_rating', 'description': 'Pain Relief Rating', 'required': True, 'index': False},
-        {'name': 'relative_pain_intensity_rating', 'description': 'Relative Pain Intensity Rating', 'required': True, 'index': False},
+        {'name': 'relative_pain_intensity_rating', 'description': 'Relative Pain Intensity Rating', 'required': True,
+         'index': False},
         {'name': 'pain_unpleasantness', 'description': 'Pain Unpleasantness', 'required': True, 'index': False}
     )
 
@@ -53,8 +53,6 @@ class VASDataTable(DynamicTable):
     def __init__(self, **kwargs):
         call_docval_func(super(VASDataTable, self).__init__, kwargs)
         self.response_options = getargs('response_options', kwargs)
-        
-
 
 
 @register_class('MPQDataTable', 'ndx-survey-data')
