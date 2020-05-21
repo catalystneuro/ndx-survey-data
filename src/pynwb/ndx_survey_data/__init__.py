@@ -23,4 +23,4 @@ if not os.path.exists(ndx_survey_data_specpath):
 # Load the namespace
 load_namespaces(ndx_survey_data_specpath)
 
-from .survey_data import NRSDataTable, VASDataTable, MPQDataTable
+from .survey_data import SurveyDataTable
