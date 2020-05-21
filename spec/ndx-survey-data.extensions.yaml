@@ -1,0 +1,282 @@
+groups:
+- neurodata_type_def: SurveyDataTable
+  neurodata_type_inc: DynamicTable
+  default_name: survey_data
+  doc: Table that holds information about the survey/behavior
+  datasets:
+  - name: nrs_pain_intensity_rating
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Pain Intensity Rating
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: nrs_pain_relief_rating
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Pain Relief Rating
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: nrs_relative_pain_intensity_rating
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Relative Pain Intensity Rating
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: nrs_pain_unpleasantness
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Pain Unpleasantness
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: vas_pain_intensity_rating
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Pain Intensity Rating
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: vas_pain_relief_rating
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Pain Relief Rating
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: vas_relative_pain_intensity_rating
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Relative Pain Intensity Rating
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: vas_pain_unpleasantness
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Pain Unpleasantness
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: throbbing
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Throbbing
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: shooting
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Shooting
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: stabbing
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Stabbing
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: sharp
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Sharp
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: cramping
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Cramping
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: gnawing
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Gnawing
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: hot_burning
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Hot-burning
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: aching
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Aching
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: heavy
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Heavy
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: tender
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Tender
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: splitting
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Splitting
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: tiring_exhausting
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Tiring-Exhausting
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: sickening
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Sickening
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: fearful
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Fearful
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
+  - name: cruel_punishing
+    neurodata_type_inc: VectorData
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Cruel-Punishing
+    attributes:
+    - name: response_options
+      dtype: text
+      doc: Response Options
