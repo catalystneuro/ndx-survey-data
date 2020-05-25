@@ -1,13 +1,17 @@
 import os
 from pynwb import NWBHDF5IO, NWBFile
 from datetime import datetime
-from ndx_survey_data import NRSDataTable, VASDataTable, MPQDataTable
+from ndx_survey_data import SurveyTable, QuestionResponse
 from numpy.testing import assert_array_equal
 
 
 def test_ext():
     nwbfile = NWBFile('description', 'id', datetime.now().astimezone())
 
+    survey_table = SurveyTable(name='survey_table', description='desc')
+    nrs_pain_intensity_rating = QuestionResponse(name='nrs_pain_intensity_rating', description='desc',
+                                               response_options=['0 = no pain, 10 = worst pain'])
+    
     # NRS Survey
 
     nrs_data_table = NRSDataTable(name='nrs_data_table',
