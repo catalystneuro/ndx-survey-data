@@ -22,16 +22,28 @@ def main():
         doc='Table that holds information about the survey/behavior',
         neurodata_type_def='SurveyTable',
         neurodata_type_inc='DynamicTable',
-        default_name='survey_data'
+        default_name='survey_data',
+        groups=[NWBGroupSpec(
+                name='question_response_col',
+                neurodata_type_inc='QuestionResponse',
+                doc='Question response column',
+                quantity='?')]
+    )
+
+    question_response = NWBGroupSpec(
+        doc='Column that holds information about a question',
+        neurodata_type_def='QuestionResponse',
+        neurodata_type_inc='VectorData',
+        default_name='question_response',
+        attributes=[NWBAttributeSpec(name='options',
+                                     doc='Response Options',
+                                     dtype='text')]
     )
 
     survey_data.add_dataset(
         name='nrs_pain_intensity_rating',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='NRS Pain Intensity Rating',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -39,11 +51,8 @@ def main():
 
     survey_data.add_dataset(
         name='nrs_pain_relief_rating',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='NRS Pain Relief Rating',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -51,11 +60,8 @@ def main():
 
     survey_data.add_dataset(
         name='nrs_relative_pain_intensity_rating',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='NRS Relative Pain Intensity Rating',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -63,11 +69,8 @@ def main():
 
     survey_data.add_dataset(
         name='nrs_pain_unpleasantness',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='NRS Pain Unpleasantness',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -75,11 +78,8 @@ def main():
 
     survey_data.add_dataset(
         name='vas_pain_intensity_rating',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='VAS Pain Intensity Rating',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -87,11 +87,8 @@ def main():
 
     survey_data.add_dataset(
         name='vas_pain_relief_rating',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='VAS Pain Relief Rating',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -99,11 +96,8 @@ def main():
 
     survey_data.add_dataset(
         name='vas_relative_pain_intensity_rating',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='VAS Relative Pain Intensity Rating',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -111,11 +105,8 @@ def main():
 
     survey_data.add_dataset(
         name='vas_pain_unpleasantness',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='VAS Pain Unpleasantness',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -123,11 +114,8 @@ def main():
 
     survey_data.add_dataset(
         name='throbbing',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Throbbing',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -135,11 +123,8 @@ def main():
 
     survey_data.add_dataset(
         name='shooting',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Shooting',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -147,11 +132,8 @@ def main():
 
     survey_data.add_dataset(
         name='stabbing',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Stabbing',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -159,11 +141,8 @@ def main():
 
     survey_data.add_dataset(
         name='sharp',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Sharp',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -171,11 +150,8 @@ def main():
 
     survey_data.add_dataset(
         name='cramping',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Cramping',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -183,11 +159,8 @@ def main():
 
     survey_data.add_dataset(
         name='gnawing',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Gnawing',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -195,11 +168,8 @@ def main():
 
     survey_data.add_dataset(
         name='hot_burning',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Hot-burning',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -207,11 +177,8 @@ def main():
 
     survey_data.add_dataset(
         name='aching',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Aching',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -219,11 +186,8 @@ def main():
 
     survey_data.add_dataset(
         name='heavy',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Heavy',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -231,11 +195,8 @@ def main():
 
     survey_data.add_dataset(
         name='tender',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Tender',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -243,11 +204,8 @@ def main():
 
     survey_data.add_dataset(
         name='splitting',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Splitting',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -255,11 +213,8 @@ def main():
 
     survey_data.add_dataset(
         name='tiring_exhausting',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Tiring-Exhausting',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -267,11 +222,8 @@ def main():
 
     survey_data.add_dataset(
         name='sickening',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Sickening',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -279,11 +231,8 @@ def main():
 
     survey_data.add_dataset(
         name='fearful',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Fearful',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
@@ -291,17 +240,14 @@ def main():
 
     survey_data.add_dataset(
         name='cruel_punishing',
-        neurodata_type_inc='VectorData',
+        neurodata_type_inc='QuestionResponse',
         doc='Cruel-Punishing',
-        attributes=[NWBAttributeSpec(name='response_options',
-                                     doc='Response Options',
-                                     dtype='text')],
         dims=('num_samples',),
         shape=(None,),
         dtype='text'
     )
 
-    new_data_types = [survey_data]
+    new_data_types = [survey_data, question_response]
 
     # export the spec to yaml files in the spec folder
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'spec'))
