@@ -20,7 +20,7 @@ def main():
 
     survey_data = NWBGroupSpec(
         doc='Table that holds information about the survey/behavior',
-        neurodata_type_def='SurveyDataTable',
+        neurodata_type_def='SurveyTable',
         neurodata_type_inc='DynamicTable',
         default_name='survey_data'
     )
