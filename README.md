@@ -2,7 +2,7 @@
 
 Structure for storing the survey data in a NWB file.
 
-![schema schema](https://github.com/Armin12/ndx-survey-data/blob/match_data/docs/media/survey_data.png?raw=true)
+![schema schema](https://github.com/Armin12/ndx-survey-data/blob/master/docs/media/survey_data.png)
 
 
 ## Installation
