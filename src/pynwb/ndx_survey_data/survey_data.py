@@ -1,3 +1,4 @@
+
 from pynwb import register_class
 from pynwb.file import DynamicTable
 from hdmf.common.table import VectorData
@@ -49,8 +50,7 @@ class QuestionResponse(VectorData):
     """
     Response data and question
     """
-    __nwbfields__ = ('name',
-                     {'name': 'options', 'child': True})
+    __nwbfields__ = ('name',)
 
     @docval(dict(name='name', type=str, doc='name of this QuestionResponse', default='QuestionResponse'),
             dict(name='description', type=str, doc='description of this QuestionResponse', default='QuestionResponse'),
