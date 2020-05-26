@@ -19,10 +19,10 @@ def main():
         ns_builder.include_type(type_name, namespace='core')
 
     survey_data = NWBGroupSpec(
-    doc='Table that holds information about the survey/behavior',
-    neurodata_type_def='SurveyTable',
-    neurodata_type_inc='DynamicTable',
-    default_name='survey_data'
+        doc='Table that holds information about the survey/behavior',
+        neurodata_type_def='SurveyTable',
+        neurodata_type_inc='DynamicTable',
+        default_name='survey_data'
     )
 
     question_response = NWBDatasetSpec(
