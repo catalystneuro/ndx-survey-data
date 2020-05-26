@@ -1,6 +1,6 @@
 # ndx-survey-data Extension for NWB
 
-Structure for storing the bipolar schema of a recording in an NWB file.
+Structure for storing the survey data in a NWB file.
 
 ![schema schema](https://github.com/Armin12/ndx-survey-data/blob/match_data/docs/media/survey_data.png?raw=true)
 
