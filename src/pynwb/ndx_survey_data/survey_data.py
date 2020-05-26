@@ -62,6 +62,5 @@ class QuestionResponse(VectorData):
             dict(name='description', type=str, doc='description of this QuestionResponse', default='QuestionResponse'),
             dict(name='options', type=str, doc='Response options', default='QuestionResponse'))  # required
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
         call_docval_func(super(QuestionResponse, self).__init__, kwargs)
         self.options = getargs('options', kwargs)
