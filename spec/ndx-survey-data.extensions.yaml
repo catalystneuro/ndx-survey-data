@@ -1,0 +1,199 @@
+datasets:
+- neurodata_type_def: QuestionResponse
+  neurodata_type_inc: VectorData
+  default_name: question_response
+  doc: Column that holds information about a question
+  attributes:
+  - name: options
+    dtype: text
+    doc: Response Options
+groups:
+- neurodata_type_def: SurveyTable
+  neurodata_type_inc: DynamicTable
+  default_name: survey_data
+  doc: Table that holds information about the survey/behavior
+  datasets:
+  - name: nrs_pain_intensity_rating
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Pain Intensity Rating
+  - name: nrs_pain_relief_rating
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Pain Relief Rating
+  - name: nrs_relative_pain_intensity_rating
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Relative Pain Intensity Rating
+  - name: nrs_pain_unpleasantness
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: NRS Pain Unpleasantness
+  - name: vas_pain_intensity_rating
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Pain Intensity Rating
+  - name: vas_pain_relief_rating
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Pain Relief Rating
+  - name: vas_relative_pain_intensity_rating
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Relative Pain Intensity Rating
+  - name: vas_pain_unpleasantness
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: VAS Pain Unpleasantness
+  - name: throbbing
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Throbbing
+  - name: shooting
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Shooting
+  - name: stabbing
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Stabbing
+  - name: sharp
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Sharp
+  - name: cramping
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Cramping
+  - name: gnawing
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Gnawing
+  - name: hot_burning
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Hot-burning
+  - name: aching
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Aching
+  - name: heavy
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Heavy
+  - name: tender
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Tender
+  - name: splitting
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Splitting
+  - name: tiring_exhausting
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Tiring-Exhausting
+  - name: sickening
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Sickening
+  - name: fearful
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Fearful
+  - name: cruel_punishing
+    neurodata_type_inc: QuestionResponse
+    dtype: text
+    dims:
+    - num_samples
+    shape:
+    - null
+    doc: Cruel-Punishing
