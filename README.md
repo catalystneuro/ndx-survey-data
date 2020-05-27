@@ -7,7 +7,7 @@ Structure for storing the survey data in a NWB file.
 
 ## Installation
 ```bash
-$ pip install ndx-survey-data
+
 ```
 
 ## Usage
