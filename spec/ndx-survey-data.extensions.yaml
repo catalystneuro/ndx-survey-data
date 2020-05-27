@@ -16,3 +16,12 @@ groups:
   neurodata_type_inc: DynamicTable
   default_name: survey_data
   doc: Table that holds information about the survey/behavior
+  datasets:
+  - name: unix_timestamp
+    neurodata_type_inc: VectorData
+    dtype: int
+    dims:
+    - num_responses
+    shape:
+    - null
+    doc: UNIX time of survey response

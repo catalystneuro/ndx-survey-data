@@ -37,6 +37,15 @@ def main():
                                      dims=('num_options',))]
     )
 
+    survey_data.add_dataset(
+        neurodata_type_inc='VectorData',
+        doc='UNIX time of survey response',
+        name='unix_timestamp',
+        dtype='int',
+        shape=(None,),
+        dims=('num_responses',)
+    )
+
     new_data_types = [survey_data, question_response]
 
     # export the spec to yaml files in the spec folder
