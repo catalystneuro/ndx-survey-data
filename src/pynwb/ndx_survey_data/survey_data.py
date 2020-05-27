@@ -60,7 +60,7 @@ class QuestionResponse(VectorData):
 
     @docval(dict(name='name', type=str, doc='name of this QuestionResponse', default='QuestionResponse'),
             dict(name='description', type=str, doc='description of this QuestionResponse', default='QuestionResponse'),
-            dict(name='options', type=list, doc='Response options', default='QuestionResponse'),
+            dict(name='options', type=('array_data', 'data'), doc='Response options', default='QuestionResponse'),
            *get_docval(VectorData.__init__, 'data'))
     def __init__(self, **kwargs):
         call_docval_func(super(QuestionResponse, self).__init__, kwargs)
