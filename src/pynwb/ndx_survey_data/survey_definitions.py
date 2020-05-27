@@ -126,5 +126,19 @@ cruel_punishing = QuestionResponse(name='cruel_punishing',
 mpq_survey_table = SurveyTable(name='mpq_survey_table',
                                description='desc',
                                columns=[
-                                   # fill me
+                                   throbbing,
+                                   shooting,
+                                   stabbing,
+                                   sharp,
+                                   cramping,
+                                   gnawing,
+                                   hot_burning,
+                                   aching,
+                                   heavy,
+                                   tender,
+                                   splitting,
+                                   tiring_exhausting,
+                                   sickening,
+                                   fearful,
+                                   cruel_punishing
                                ])
