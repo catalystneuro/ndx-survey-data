@@ -12,28 +12,28 @@ def test_ext():
 
     pain_intensity_rating = QuestionResponse(name='pain_intensity_rating',
                                              description='desc',
-                                             options='0 = no pain, 10 = worst pain')
+                                             options=['0 = no pain, 10 = worst pain'])
     pain_intensity_rating.add_row('2')
     pain_intensity_rating.add_row('1')
     pain_intensity_rating.add_row('8')
 
     pain_relief_rating = QuestionResponse(name='pain_relief_rating',
                                           description='desc',
-                                          options='0 = no paint relief, 10 = complete pain relief')
+                                          options=['0 = no paint relief, 10 = complete pain relief'])
     pain_relief_rating.add_row('7')
     pain_relief_rating.add_row('2')
     pain_relief_rating.add_row('9')
 
     relative_pain_intensity_rating = QuestionResponse(name='relative_pain_intensity_rating',
                                                       description='desc',
-                                                      options='0 = better, 5 = same, 10 = worse')
+                                                      options=['0 = better, 5 = same, 10 = worse'])
     relative_pain_intensity_rating.add_row('5')
     relative_pain_intensity_rating.add_row('4')
     relative_pain_intensity_rating.add_row('10')
 
     pain_unpleasantness = QuestionResponse(name='pain_unpleasantness',
                                            description='desc',
-                                           options='0 = pleasant, 10 = unpleasant')
+                                           options=['0 = pleasant, 10 = unpleasant'])
     pain_unpleasantness.add_row('9')
     pain_unpleasantness.add_row('3')
     pain_unpleasantness.add_row('7')
