@@ -17,7 +17,7 @@ setup_args = {
     'description': 'NWB extension for survey/ behavioral data',
     'author': 'Ben Dichter, Armin Najarpour Foroushani',
     'author_email': 'ben.dichter@catalystneuro.com',
-    'url': '',
+    'url': 'https://github.com/catalystneuro/ndx-survey-data',
     'license': 'BSD 3-Clause',
     'long_description': long_description,
     'long_description_content_type': "text/markdown",
