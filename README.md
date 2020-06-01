@@ -2,6 +2,9 @@
 
 Structure for storing the survey data in a NWB file.
 
+[![codecov](https://codecov.io/gh/catalystneuro/ndx-survey-data/branch/master/graph/badge.svg)](https://codecov.io/gh/catalystneuro/ndx-survey-data)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
 ![schema schema](https://github.com/catalystneuro/ndx-survey-data/blob/master/docs/media/survey_data.png?raw=true)
 
 
