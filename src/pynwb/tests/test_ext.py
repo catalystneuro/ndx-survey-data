@@ -5,7 +5,7 @@ from ndx_survey_data import SurveyTable, QuestionResponse
 from ndx_survey_data.survey_definitions import nrs_survey_table
 
 
-def test_ext():
+def test_ext_nrs():
 
     nwbfile = NWBFile('description', 'id', datetime.now().astimezone())
 
