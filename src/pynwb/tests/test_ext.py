@@ -1,7 +1,7 @@
 import os
 from pynwb import NWBHDF5IO, NWBFile
 from datetime import datetime
-from ndx_survey_data import SurveyTable, QuestionResponse
+#from ndx_survey_data import SurveyTable, QuestionResponse
 from ndx_survey_data.survey_definitions import nrs_survey_table
 
 
