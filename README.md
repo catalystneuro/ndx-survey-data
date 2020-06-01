@@ -126,15 +126,15 @@ To add a custom survey:
 
 from ndx_survey_data import QuestionResponse, SurveyTable
 
-q1 = QuestionResponse(name='question 1',
+q1 = QuestionResponse(name='question1',
                       description='desc',
                       options=['option 1', 'option 2', 'option 3'])
 
-q2 = QuestionResponse(name='question 2', 
+q2 = QuestionResponse(name='question2', 
                       description='desc',
                       options=['option 1', 'option 2', 'option 3'])
 
-q3 = QuestionResponse(name='question 3', 
+q3 = QuestionResponse(name='question3', 
                       description='desc',
                       options=['option 1', 'option 2', 'option 3'])
 
@@ -143,8 +143,8 @@ custom_survey_table = SurveyTable(name='custom_survey_table',
                                description='desc', 
                                columns=[q1, q2, q3])
 
-custom_survey_table.add_row(q1=1, q2=3, q3=0, unix_timestamp=1588217283)
-custom_survey_table.add_row(q1=3, q2=1, q3=0, unix_timestamp=1588217283)
-custom_survey_table.add_row(q1=2, q2=2, q3=2, unix_timestamp=1588217283)
+custom_survey_table.add_row(question1=1, question2=3, question3=0, unix_timestamp=1588217283)
+custom_survey_table.add_row(question1=3, question2=1, question3=0, unix_timestamp=1588217283)
+custom_survey_table.add_row(question1=2, question2=2, question3=2, unix_timestamp=1588217283)
 
 ```
