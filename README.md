@@ -18,7 +18,7 @@ $ pip install ndx-survey-data
 
 ```python
 from pynwb import NWBHDF5IO, NWBFile
-import datetime
+from datetime import datetime
 from ndx_survey_data.survey_definitions import nrs_survey_table
 
 

@@ -1,23 +1,23 @@
 from .survey_data import QuestionResponse, SurveyTable
 
 # define NRS table
-nrs_pain_intensity_rating = QuestionResponse(name='nrs_pain_intensity_rating',
+nrs_pain_intensity_rating = QuestionResponse(name='pain_intensity_rating',
                                              description='desc',
                                              options=['0 (no pain)', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                                                       '10 (worst pain)',
                                                       'no answer'])
 
-nrs_pain_relief_rating = QuestionResponse(name='nrs_pain_relief_rating',
+nrs_pain_relief_rating = QuestionResponse(name='pain_relief_rating',
                                           description='desc',
                                           options=['0 (no pain relief)', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                                                    ' 10 (complete pain relief)', 'no answer'])
 
-nrs_relative_pain_intensity_rating = QuestionResponse(name='nrs_relative_pain_intensity_rating',
+nrs_relative_pain_intensity_rating = QuestionResponse(name='relative_pain_intensity_rating',
                                                       description='desc',
                                                       options=['0 (better)', '1', '2', '3', '4', '5 (same)', '6', '7', '8', '9',
                                                                '10 (worse)', 'no answer'])
 
-nrs_pain_unpleasantness = QuestionResponse(name='nrs_pain_unpleasantness',
+nrs_pain_unpleasantness = QuestionResponse(name='pain_unpleasantness',
                                            description='desc',
                                            options=['0 (pleasant)', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                                                     '10 (unpleasant)',
@@ -34,19 +34,19 @@ nrs_survey_table = SurveyTable(name='nrs_survey_table',
 
 # define VAS table
 
-vas_pain_intensity_rating = QuestionResponse(name='vas_pain_intensity_rating',
+vas_pain_intensity_rating = QuestionResponse(name='pain_intensity_rating',
                                              description='desc',
                                              options=['0 (No pain)'] + [str(i) for i in range(2, 100)] + ['100 (Worst pain possible)', 'no answer'])
 
-vas_pain_relief_rating = QuestionResponse(name='vas_pain_relief_rating',
+vas_pain_relief_rating = QuestionResponse(name='pain_relief_rating',
                                           description='desc',
                                           options=['0 (no pain relief)'] + [str(i) for i in range(2, 100)] + ['100 (complete pain relief)', 'no answer'])
 
-vas_relative_pain_intensity_rating = QuestionResponse(name='vas_relative_pain_intensity_rating',
+vas_relative_pain_intensity_rating = QuestionResponse(name='relative_pain_intensity_rating',
                                                       description='desc',
                                                       options=['0 (better)'] + [str(i) for i in range(2, 100)] + ['100 (worse)', 'no answer'])
 
-vas_pain_unpleasantness = QuestionResponse(name='vas_pain_unpleasantness',
+vas_pain_unpleasantness = QuestionResponse(name='pain_unpleasantness',
                                            description='desc',
                                            options=['0 (pleasant)'] + [str(i) for i in range(2, 100)] + ['100 (unpleasant)', 'no answer'])
 
