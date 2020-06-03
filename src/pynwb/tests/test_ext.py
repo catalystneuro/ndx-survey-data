@@ -10,34 +10,34 @@ def test_ext_nrs():
     nwbfile = NWBFile('description', 'id', datetime.now().astimezone())
 
     nrs_survey_table.add_row(
-        nrs_pain_intensity_rating=1,
-        nrs_pain_relief_rating=5,
-        nrs_relative_pain_intensity_rating=2,
-        nrs_pain_unpleasantness=3,
+        pain_intensity_rating=1,
+        pain_relief_rating=5,
+        relative_pain_intensity_rating=2,
+        pain_unpleasantness=3,
         unix_timestamp=1588217283
     )
 
     nrs_survey_table.add_row(
-        nrs_pain_intensity_rating=3,
-        nrs_pain_relief_rating=1,
-        nrs_relative_pain_intensity_rating=6,
-        nrs_pain_unpleasantness=2,
+        pain_intensity_rating=3,
+        pain_relief_rating=1,
+        relative_pain_intensity_rating=6,
+        pain_unpleasantness=2,
         unix_timestamp=1588217283
     )
 
     nrs_survey_table.add_row(
-        nrs_pain_intensity_rating=5,
-        nrs_pain_relief_rating=2,
-        nrs_relative_pain_intensity_rating=0,
-        nrs_pain_unpleasantness=2,
+        pain_intensity_rating=5,
+        pain_relief_rating=2,
+        relative_pain_intensity_rating=0,
+        pain_unpleasantness=2,
         unix_timestamp=1588217283
     )
 
     nrs_survey_table.add_row(
-        nrs_pain_intensity_rating=3,
-        nrs_pain_relief_rating=1,
-        nrs_relative_pain_intensity_rating=6,
-        nrs_pain_unpleasantness=2,
+        pain_intensity_rating=3,
+        pain_relief_rating=1,
+        relative_pain_intensity_rating=6,
+        pain_unpleasantness=2,
         unix_timestamp=1588217283
     )
 
