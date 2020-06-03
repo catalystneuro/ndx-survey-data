@@ -61,65 +61,67 @@ vas_survey_table = SurveyTable(name='vas_survey_table',
 
 # define MPQ table
 
+mpq_options = ['Mild', 'Moderate', 'Severe', 'no answer']
+
 throbbing = QuestionResponse(name='throbbing',
                              description='desc',
-                             options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                             options=mpq_options)
 
 shooting = QuestionResponse(name='shooting',
                             description='desc',
-                            options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                            options=mpq_options)
 
 stabbing = QuestionResponse(name='stabbing',
                             description='desc',
-                            options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                            options=mpq_options)
 
 sharp = QuestionResponse(name='sharp',
                          description='desc',
-                         options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                         options=mpq_options)
 
 cramping = QuestionResponse(name='cramping',
                             description='desc',
-                            options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                            options=mpq_options)
 
 gnawing = QuestionResponse(name='gnawing',
                            description='desc',
-                           options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                           options=mpq_options)
 
 hot_burning = QuestionResponse(name='hot_burning',
                                description='desc',
-                               options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                               options=mpq_options)
 
 aching = QuestionResponse(name='aching',
                           description='desc',
-                          options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                          options=mpq_options)
 
 heavy = QuestionResponse(name='heavy',
                          description='desc',
-                         options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                         options=mpq_options)
 
 tender = QuestionResponse(name='tender',
                           description='desc',
-                          options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                          options=mpq_options)
 
 splitting = QuestionResponse(name='splitting',
                              description='desc',
-                             options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                             options=mpq_options)
 
 tiring_exhausting = QuestionResponse(name='tiring_exhausting',
                                      description='desc',
-                                     options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                                     options=mpq_options)
 
 sickening = QuestionResponse(name='sickening',
                              description='desc',
-                             options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                             options=mpq_options)
 
 fearful = QuestionResponse(name='fearful',
                            description='desc',
-                           options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                           options=mpq_options)
 
 cruel_punishing = QuestionResponse(name='cruel_punishing',
                                    description='desc',
-                                   options=['Mild', 'Moderate', 'Severe', 'no answer'])
+                                   options=mpq_options)
 
 mpq_survey_table = SurveyTable(name='mpq_survey_table',
                                description='desc',
