@@ -3,24 +3,24 @@ from .survey_data import QuestionResponse, SurveyTable
 # define NRS table
 nrs_pain_intensity_rating = QuestionResponse(name='nrs_pain_intensity_rating',
                                              description='desc',
-                                             options=['no pain', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                                                      'worst pain',
+                                             options=['0 (no pain)', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                                                      '10 (worst pain)',
                                                       'no answer'])
 
 nrs_pain_relief_rating = QuestionResponse(name='nrs_pain_relief_rating',
                                           description='desc',
-                                          options=['no pain relief', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                                                   'complete pain relief', 'no answer'])
+                                          options=['0 (no pain relief)', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                                                   ' 10 (complete pain relief)', 'no answer'])
 
 nrs_relative_pain_intensity_rating = QuestionResponse(name='nrs_relative_pain_intensity_rating',
                                                       description='desc',
-                                                      options=['better', '1', '2', '3', '4', 'same', '6', '7', '8', '9',
-                                                               'worse', 'no answer'])
+                                                      options=['0 (better)', '1', '2', '3', '4', '5 (same)', '6', '7', '8', '9',
+                                                               '10 (worse)', 'no answer'])
 
 nrs_pain_unpleasantness = QuestionResponse(name='nrs_pain_unpleasantness',
                                            description='desc',
-                                           options=['pleasant', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                                                    'unpleasant',
+                                           options=['0 (pleasant)', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                                                    '10 (unpleasant)',
                                                     'no answer'])
 
 nrs_survey_table = SurveyTable(name='nrs_survey_table',
@@ -36,21 +36,19 @@ nrs_survey_table = SurveyTable(name='nrs_survey_table',
 
 vas_pain_intensity_rating = QuestionResponse(name='vas_pain_intensity_rating',
                                              description='desc',
-                                             options=['no pain', '1/50 to 50/50', 'worst pain possible', 'no answer'])
+                                             options=['0 (No pain)'] + [str(i) for i in range(2, 100)] + ['100 (Worst pain possible)', 'no answer'])
 
 vas_pain_relief_rating = QuestionResponse(name='vas_pain_relief_rating',
                                           description='desc',
-                                          options=['no pain relief', '1/50 to 50/50', 'complete pain relief',
-                                                   'no answer'])
+                                          options=['0 (no pain relief)'] + [str(i) for i in range(2, 100)] + ['100 (complete pain relief)', 'no answer'])
 
 vas_relative_pain_intensity_rating = QuestionResponse(name='vas_relative_pain_intensity_rating',
                                                       description='desc',
-                                                      options=['better', '1/50 to 25/50', 'same', '26/50 to 50/50',
-                                                               'worse', 'no answer'])
+                                                      options=['0 (better)'] + [str(i) for i in range(2, 100)] + ['100 (worse)', 'no answer'])
 
 vas_pain_unpleasantness = QuestionResponse(name='vas_pain_unpleasantness',
                                            description='desc',
-                                           options=['pleasant', '1/50 to 50/50', 'unpleasant', 'no answer'])
+                                           options=['0 (pleasant)'] + [str(i) for i in range(2, 100)] + ['100 (unpleasant)', 'no answer'])
 
 vas_survey_table = SurveyTable(name='vas_survey_table',
                                description='desc',
