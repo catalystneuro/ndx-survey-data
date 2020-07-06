@@ -20,37 +20,38 @@ $ pip install ndx-survey-data
 from pynwb import NWBHDF5IO, NWBFile
 from datetime import datetime
 from ndx_survey_data.survey_definitions import nrs_survey_table
+import numpy as np
 
 
 nrs_survey_table.add_row(
-    pain_intensity_rating=1,
-    pain_relief_rating=5,
-    relative_pain_intensity_rating=2,
-    pain_unpleasantness=3,
+    pain_intensity_rating=1.1,
+    pain_relief_rating=5.5,
+    relative_pain_intensity_rating=np.nan,
+    pain_unpleasantness=np.nan,
     unix_timestamp=1588217283
 )
 
 nrs_survey_table.add_row(
-    pain_intensity_rating=3,
+    pain_intensity_rating=np.nan,
     pain_relief_rating=1,
     relative_pain_intensity_rating=6,
-    pain_unpleasantness=2,
+    pain_unpleasantness=2.7,
     unix_timestamp=1588217283
 )
 
 nrs_survey_table.add_row(
-    pain_intensity_rating=5,
-    pain_relief_rating=2,
-    relative_pain_intensity_rating=0,
-    pain_unpleasantness=2,
+    pain_intensity_rating=5.3,
+    pain_relief_rating=np.nan,
+    relative_pain_intensity_rating=0.8,
+    pain_unpleasantness=2.1,
     unix_timestamp=1588217283
 )
 
 nrs_survey_table.add_row(
-    pain_intensity_rating=3,
-    pain_relief_rating=1,
+    pain_intensity_rating=3.7,
+    pain_relief_rating=np.nan,
     relative_pain_intensity_rating=6,
-    pain_unpleasantness=2,
+    pain_unpleasantness=np.nan,
     unix_timestamp=1588217283
 )
 nwbfile = NWBFile('description', 'id', datetime.now().astimezone())
@@ -88,34 +89,34 @@ with NWBHDF5IO('test_nwb.nwb', 'r', load_namespaces=True) as io:
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
-      <td>5</td>
-      <td>2</td>
-      <td>3</td>
+      <td>1.1</td>
+      <td>5.5</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>1588217283</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3</td>
-      <td>1</td>
-      <td>6</td>
-      <td>2</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>2.7</td>
       <td>1588217283</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5</td>
-      <td>2</td>
-      <td>0</td>
-      <td>2</td>
+      <td>5.3</td>
+      <td>NaN</td>
+      <td>0.8</td>
+      <td>2.1</td>
       <td>1588217283</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
-      <td>1</td>
-      <td>6</td>
-      <td>2</td>
+      <td>3.7</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>NaN</td>
       <td>1588217283</td>
     </tr>
   </tbody>
