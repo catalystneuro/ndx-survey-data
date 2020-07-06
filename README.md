@@ -145,8 +145,8 @@ custom_survey_table = SurveyTable(name='custom_survey_table',
                                description='desc', 
                                columns=[q1, q2, q3])
 
-custom_survey_table.add_row(question1=1, question2=3, question3=0, unix_timestamp=1588217283)
-custom_survey_table.add_row(question1=3, question2=1, question3=0, unix_timestamp=1588217283)
-custom_survey_table.add_row(question1=2, question2=2, question3=2, unix_timestamp=1588217283)
+custom_survey_table.add_row(question1=1.3, question2=3.9, question3=0.2, unix_timestamp=1588217283)
+custom_survey_table.add_row(question1=3.3, question2=1.4, question3=0.6, unix_timestamp=1588217283)
+custom_survey_table.add_row(question1=2.5, question2=2.1, question3=2.8, unix_timestamp=1588217283)
 
 ```
